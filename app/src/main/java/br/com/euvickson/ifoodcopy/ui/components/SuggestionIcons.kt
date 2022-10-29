@@ -2,7 +2,7 @@ package br.com.euvickson.ifoodcopy.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,32 +16,31 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.euvickson.ifoodcopy.R
-import br.com.euvickson.ifoodcopy.model.Restaurant
-import br.com.euvickson.ifoodcopy.ui.theme.IfoodCopyTheme
+import br.com.euvickson.ifoodcopy.model.Icon
 
 @Composable
-fun RestaurantIcon(restaurant: Restaurant) {
+fun SuggestionIcons(icon: Icon) {
     Column(
         Modifier
             .width(100.dp)
             .heightIn(max = 150.dp)
     ) {
         Image(
-            painter = painterResource(id = restaurant.logo),
-            contentDescription = "Imagem do Restaurante",
+            painter = painterResource(id = icon.iconImage),
+            contentDescription = "Imagem de sugestão do que pedir no app",
             Modifier
                 .height(100.dp)
                 .width(100.dp)
-                .clip(shape = CircleShape)
+                .clip(shape = RoundedCornerShape(20))
                 .align(Alignment.CenterHorizontally),
             contentScale = ContentScale.Crop
         )
         Text(
             modifier = Modifier.fillMaxWidth(),
-            text = restaurant.nome,
+            text = icon.name,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
-            maxLines = 2,
+            maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
     }
@@ -49,8 +48,6 @@ fun RestaurantIcon(restaurant: Restaurant) {
 
 @Preview(showBackground = true)
 @Composable
-private fun RestaurantIconPreview() {
-    IfoodCopyTheme {
-        RestaurantIcon(restaurant = Restaurant("Boa Pizza", R.drawable.placeholder))
-    }
+fun SuggestionIconsPreview() {
+    SuggestionIcons(icon = Icon(name = "Restaurantes", iconImage = R.drawable.placeholder))
 }
