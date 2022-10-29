@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -21,6 +23,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.euvickson.ifoodcopy.model.Profile
 import br.com.euvickson.ifoodcopy.model.Restaurant
 import br.com.euvickson.ifoodcopy.ui.theme.IfoodCopyTheme
 
@@ -29,12 +32,91 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             IfoodCopyTheme {
-                Surface(){
-                    RestaurantIcon(restaurant = Restaurant("Boa Pizza", R.drawable.boa_pizzaria))
+                Surface {
+                    RestaurantList(
+                        profile = Profile(
+                            lastRestaurantList = listOf(
+                                Restaurant(
+                                    "Boa Pizza",
+                                    R.drawable.placeholder
+                                ),
+                                Restaurant(
+                                    "Boa Pizza",
+                                    R.drawable.placeholder
+                                ),
+                                Restaurant(
+                                    "Boa Pizza",
+                                    R.drawable.placeholder
+                                ),
+                                Restaurant(
+                                    "Boa Pizza",
+                                    R.drawable.placeholder
+                                ),
+                                Restaurant(
+                                    "Boa Pizza",
+                                    R.drawable.placeholder
+                                ),
+                                Restaurant(
+                                    "Boa Pizza",
+                                    R.drawable.placeholder
+                                )
+                            )
+                        )
+                    )
+//                    RestaurantIcon(restaurant = Restaurant("Boa Pizza", R.drawable.boa_pizzaria))
                 }
             }
         }
     }
+}
+
+@Composable
+fun RestaurantList(profile: Profile) {
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        profile.lastRestaurantList?.let { restaurantList ->
+            items(restaurantList) { restaurant ->
+                RestaurantIcon(restaurant = restaurant)
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun RestaurantListPreview() {
+    RestaurantList(
+        profile = Profile(
+            lastRestaurantList = listOf(
+                Restaurant(
+                    "Boa Pizza",
+                    R.drawable.placeholder
+                ),
+                Restaurant(
+                    "Boa Pizza",
+                    R.drawable.placeholder
+                ),
+                Restaurant(
+                    "Boa Pizza",
+                    R.drawable.placeholder
+                ),
+                Restaurant(
+                    "Boa Pizza",
+                    R.drawable.placeholder
+                ),
+                Restaurant(
+                    "Boa Pizza",
+                    R.drawable.placeholder
+                ),
+                Restaurant(
+                    "Boa Pizza",
+                    R.drawable.placeholder
+                )
+            )
+        )
+    )
 }
 
 @Composable
@@ -69,6 +151,6 @@ fun RestaurantIcon(restaurant: Restaurant) {
 @Composable
 fun RestaurantIconPreview() {
     IfoodCopyTheme {
-        RestaurantIcon(restaurant = Restaurant("Boa Pizza", R.drawable.boa_pizzaria))
+        RestaurantIcon(restaurant = Restaurant("Boa Pizza", R.drawable.placeholder))
     }
 }
