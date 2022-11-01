@@ -6,10 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.euvickson.ifoodcopy.model.Profile
-import br.com.euvickson.ifoodcopy.model.Restaurant
-import br.com.euvickson.ifoodcopy.ui.components.RestaurantIcon
-import br.com.euvickson.ifoodcopy.ui.components.RestaurantList
+import br.com.euvickson.ifoodcopy.model.Icon
+import br.com.euvickson.ifoodcopy.ui.components.TabBar
 import br.com.euvickson.ifoodcopy.ui.screens.StartScreen
 import br.com.euvickson.ifoodcopy.ui.theme.IfoodCopyTheme
 
