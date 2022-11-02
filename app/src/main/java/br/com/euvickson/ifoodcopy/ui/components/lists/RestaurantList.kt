@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import br.com.euvickson.ifoodcopy.model.Profile
 import br.com.euvickson.ifoodcopy.model.Restaurant
 import br.com.euvickson.ifoodcopy.R
+import br.com.euvickson.ifoodcopy.ui.components.samples.profileLastRestaurantSample
 
 @Composable
 fun RestaurantList(profile: Profile) {
@@ -43,35 +44,6 @@ fun RestaurantList(profile: Profile) {
 @Preview(showBackground = true)
 @Composable
 fun RestaurantListPreview() {
-    RestaurantList(
-        profile = Profile(
-            lastRestaurantList = listOf(
-                Restaurant(
-                    "Boa Pizza",
-                    R.drawable.placeholder
-                ),
-                Restaurant(
-                    "Boa Pizza",
-                    R.drawable.placeholder
-                ),
-                Restaurant(
-                    "Boa Pizza",
-                    R.drawable.placeholder
-                ),
-                Restaurant(
-                    "Boa Pizza",
-                    R.drawable.placeholder
-                ),
-                Restaurant(
-                    "Boa Pizza",
-                    R.drawable.placeholder
-                ),
-                Restaurant(
-                    "Boa Pizza",
-                    R.drawable.placeholder
-                )
-            )
-        )
-    )
+    RestaurantList(profileLastRestaurantSample)
 
 }

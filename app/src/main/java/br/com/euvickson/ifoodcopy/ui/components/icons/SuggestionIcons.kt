@@ -1,4 +1,4 @@
-package br.com.euvickson.ifoodcopy.ui.components
+package br.com.euvickson.ifoodcopy.ui.components.icons
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
