@@ -4,13 +4,11 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.sharp.ArrowDropDown
-import androidx.compose.material.icons.sharp.List
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,7 +25,12 @@ fun TabBar(tabBarIcons: List<Icon>) {
 
     Column (horizontalAlignment = Alignment.CenterHorizontally) {
 
-        Row(modifier = Modifier.clickable {}) {
+        Row(
+            modifier = Modifier
+                .clickable {}
+                .padding(vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             Text(text = "Rua Tal")
             Icon(Icons.Sharp.ArrowDropDown, contentDescription = null)
         }
