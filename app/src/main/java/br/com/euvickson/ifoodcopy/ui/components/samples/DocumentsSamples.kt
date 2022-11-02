@@ -5,7 +5,7 @@ import br.com.euvickson.ifoodcopy.model.Icon
 import br.com.euvickson.ifoodcopy.model.Profile
 import br.com.euvickson.ifoodcopy.model.Restaurant
 
-val profileLastRestaurantSample = Profile(lastRestaurantList = listOf(
+val listOfProfileSample = Profile(lastRestaurantList = listOf(
         Restaurant(
             "Boa Pizza",
             R.drawable.placeholder

@@ -10,9 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.euvickson.ifoodcopy.model.Profile
-import br.com.euvickson.ifoodcopy.model.Restaurant
-import br.com.euvickson.ifoodcopy.R
-import br.com.euvickson.ifoodcopy.ui.components.samples.profileLastRestaurantSample
+import br.com.euvickson.ifoodcopy.ui.components.samples.listOfProfileSample
 
 @Composable
 fun RestaurantList(profile: Profile) {
@@ -44,6 +42,6 @@ fun RestaurantList(profile: Profile) {
 @Preview(showBackground = true)
 @Composable
 fun RestaurantListPreview() {
-    RestaurantList(profileLastRestaurantSample)
+    RestaurantList(listOfProfileSample)
 
 }
