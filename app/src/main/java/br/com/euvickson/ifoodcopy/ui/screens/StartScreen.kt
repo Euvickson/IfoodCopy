@@ -17,6 +17,7 @@ fun StartScreen() {
     Column {
         TabBar(tabBarIcons = listOfIconsSample)
         CardList()
+        RestaurantList(listOfProfileSample)
     }
 }
 

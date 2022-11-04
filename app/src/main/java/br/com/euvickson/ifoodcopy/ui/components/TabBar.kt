@@ -24,7 +24,6 @@ fun TabBar(tabBarIcons: List<Icon>) {
 
 
     Column (horizontalAlignment = Alignment.CenterHorizontally) {
-
         Row(
             modifier = Modifier
                 .clickable {}
