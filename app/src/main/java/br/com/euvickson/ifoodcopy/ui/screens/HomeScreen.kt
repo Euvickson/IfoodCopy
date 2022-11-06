@@ -9,6 +9,7 @@ import br.com.euvickson.ifoodcopy.ui.components.RestaurantList
 import br.com.euvickson.ifoodcopy.ui.components.TabBar
 import br.com.euvickson.ifoodcopy.ui.components.icons.RestaurantDetailCard
 import br.com.euvickson.ifoodcopy.ui.components.lists.CardList
+import br.com.euvickson.ifoodcopy.ui.components.lists.ListOfRestaurantDetailCard
 import br.com.euvickson.ifoodcopy.ui.components.samples.listOfIconsSample
 import br.com.euvickson.ifoodcopy.ui.components.samples.listOfProfileSample
 import br.com.euvickson.ifoodcopy.ui.components.samples.listOfRestaurantSample
@@ -19,7 +20,7 @@ fun StartScreen() {
         TabBar(tabBarIcons = listOfIconsSample)
         CardList()
         RestaurantList(listOfProfileSample)
-        RestaurantDetailCard(restaurant = listOfRestaurantSample[0])
+        ListOfRestaurantDetailCard(listOfRestaurants = listOfRestaurantSample)
     }
 }
 
