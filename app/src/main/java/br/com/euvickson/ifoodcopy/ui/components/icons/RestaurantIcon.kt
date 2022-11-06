@@ -15,8 +15,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.euvickson.ifoodcopy.R
 import br.com.euvickson.ifoodcopy.model.Restaurant
+import br.com.euvickson.ifoodcopy.ui.components.samples.listOfRestaurantSample
 import br.com.euvickson.ifoodcopy.ui.theme.IfoodCopyTheme
 
 @Composable
@@ -38,7 +38,7 @@ fun RestaurantIcon(restaurant: Restaurant) {
         )
         Text(
             modifier = Modifier.fillMaxWidth(),
-            text = restaurant.nome,
+            text = restaurant.name,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
             maxLines = 2,
@@ -51,6 +51,6 @@ fun RestaurantIcon(restaurant: Restaurant) {
 @Composable
 private fun RestaurantIconPreview() {
     IfoodCopyTheme {
-        RestaurantIcon(restaurant = Restaurant("Boa Pizza", R.drawable.placeholder))
+        RestaurantIcon(restaurant = listOfRestaurantSample[1])
     }
 }

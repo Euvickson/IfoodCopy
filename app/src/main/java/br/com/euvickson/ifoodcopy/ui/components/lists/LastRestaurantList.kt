@@ -43,5 +43,4 @@ fun RestaurantList(profile: Profile) {
 @Composable
 fun RestaurantListPreview() {
     RestaurantList(listOfProfileSample)
-
 }

@@ -7,50 +7,63 @@ import br.com.euvickson.ifoodcopy.model.Restaurant
 
 val listOfProfileSample = Profile(lastRestaurantList = listOf(
         Restaurant(
-            "Boa Pizza",
-            R.drawable.placeholder
+            name = "Boa Pizza",
+            logo = R.drawable.placeholder
         ),
         Restaurant(
-            "Boa Pizza",
-            R.drawable.placeholder
+            name = "Boa Pizza",
+            logo = R.drawable.placeholder
         ),
         Restaurant(
-            "Boa Pizza",
-            R.drawable.placeholder
+            name = "Boa Pizza",
+            logo = R.drawable.placeholder
         ),
         Restaurant(
-            "Boa Pizza",
-            R.drawable.placeholder
+            name = "Boa Pizza",
+            logo = R.drawable.placeholder
         ),
         Restaurant(
-            "Boa Pizza",
-            R.drawable.placeholder
+            name = "Boa Pizza",
+            logo = R.drawable.placeholder
         ),
         Restaurant(
-            "Boa Pizza",
-            R.drawable.placeholder
-        )
+            name = "Boa Pizza",
+            logo = R.drawable.placeholder
+        ),
     ))
 
 val listOfIconsSample = listOf(
     Icon(
-        R.drawable.placeholder,
-        "Restaurantes"
+        iconImage = R.drawable.placeholder,
+        name = "Restaurantes"
     ),
     Icon(
-        R.drawable.placeholder,
-        "Bebidas"
+        iconImage = R.drawable.placeholder,
+        name = "Restaurantes"
     ),
     Icon(
-        R.drawable.placeholder,
-        "Pets"
+        iconImage = R.drawable.placeholder,
+        name = "Restaurantes"
     ),
     Icon(
-        R.drawable.placeholder,
-        "Shopping"
+        iconImage = R.drawable.placeholder,
+        name = "Restaurantes"
     ),
     Icon(
-        R.drawable.placeholder,
-        "Farmácias"
-    )
+        iconImage = R.drawable.placeholder,
+        name = "Restaurantes"
+    ),
+    Icon(
+        iconImage = R.drawable.placeholder,
+        name = "Restaurantes"
+    ),
+)
+
+val listOfRestaurantSample = listOf(
+    Restaurant(name = "Boa Pizza", restaurantType = "Massa", logo = R.drawable.placeholder),
+    Restaurant(name = "Boa Pizza", restaurantType = "Massa", logo = R.drawable.placeholder),
+    Restaurant(name = "Boa Pizza", restaurantType = "Massa", logo = R.drawable.placeholder),
+    Restaurant(name = "Boa Pizza", restaurantType = "Massa", logo = R.drawable.placeholder),
+    Restaurant(name = "Boa Pizza", restaurantType = "Massa", logo = R.drawable.placeholder),
+    Restaurant(name = "Boa Pizza", restaurantType = "Massa", logo = R.drawable.placeholder)
 )
