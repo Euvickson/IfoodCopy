@@ -30,6 +30,6 @@ fun CardIcon() {
 
 @Preview
 @Composable
-fun CardIconPreview() {
+private fun CardIconPreview() {
     CardIcon()
 }

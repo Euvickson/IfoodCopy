@@ -41,6 +41,6 @@ fun RestaurantList(profile: Profile) {
 
 @Preview(showBackground = true)
 @Composable
-fun RestaurantListPreview() {
+private fun RestaurantListPreview() {
     RestaurantList(listOfProfileSample)
 }

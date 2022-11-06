@@ -61,6 +61,6 @@ fun TabBar(tabBarIcons: List<Icon>) {
 
 @Preview(showBackground = true)
 @Composable
-fun TabBarPreview() {
+private fun TabBarPreview() {
     TabBar(tabBarIcons = listOfIconsSample)
 }

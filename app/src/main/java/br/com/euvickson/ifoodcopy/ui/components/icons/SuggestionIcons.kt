@@ -48,6 +48,6 @@ fun SuggestionIcons(icon: Icon) {
 
 @Preview(showBackground = true)
 @Composable
-fun SuggestionIconsPreview() {
+private fun SuggestionIconsPreview() {
     SuggestionIcons(icon = Icon(name = "Restaurantes", iconImage = R.drawable.placeholder))
 }

@@ -16,6 +16,6 @@ fun CardList() {
 
 @Preview
 @Composable
-fun CardListPreview() {
+private fun CardListPreview() {
     CardList()
 }
